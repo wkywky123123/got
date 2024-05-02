@@ -1,45 +1,64 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>淡入淡出动画效果</title>
+    <title>欢迎页面</title>
     <style>
-        /* 定义关键帧动画 */
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
         }
-
-        /* 应用动画到按钮 */
-        .fade-btn {
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 80%;
+            max-width: 400px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .card a {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
             padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            animation: fadeInOut 3s infinite; /* 应用动画，持续3秒，无限循环 */
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .card a:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-
-<button class="fade-btn">我淡入淡出</button>
-
-<script>
-    // 获取按钮元素
-    var btn = document.querySelector('.fade-btn');
-
-    // 监听按钮的点击事件
-    btn.addEventListener('click', function() {
-        // 点击时切换动画的播放状态
-        if (btn.style.animationPlayState === 'paused') {
-            btn.style.animationPlayState = 'running';
-        } else {
-            btn.style.animationPlayState = 'paused';
-        }
-    });
-</script>
-
-</body>
-</html>
+    <div class="container">
+        <div class="card">
+            <h1>欢迎来到我的资源站点</h1>
+            <p>在这里，你将找到各种有用的资源，帮助你更好地学习和工作。</p>
+            <a href="/resources">浏览资源</a>
+        </div>
+    </div>
 </body>
 </html>

@@ -3,74 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>响应式欢迎页面</title>
+    <title>忾氧的资源站</title>
     <style>
         body, h1, p {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
         }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        .header {
             background-color: #f5f5f5;
-            padding: 0 20px; /* 添加内边距以避免内容太靠近屏幕边缘 */
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            justify-content: space-between;
         }
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 80%;
-            max-width: 400px; /* 最大宽度限制 */
-            transition: transform 0.3s ease-in-out;
+        .logo {
+            height: 50px; /* 调整logo高度以适应布局 */
         }
-        .card h1 {
-            color: #333;
+        .title {
             font-size: 24px;
+            font-weight: bold;
         }
-        .card p {
-            color: #666;
-            line-height: 1.6;
+        .nav {
+            display: flex;
+            gap: 10px; /* 按钮之间的间距 */
         }
-        .card a {
+        .nav a {
             display: inline-block;
             background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 20px;
             transition: background-color 0.3s ease;
         }
-        .card a:hover {
+        .nav a:hover {
             background-color: #0056b3;
         }
-        
-        /* 媒体查询：针对小屏幕设备调整样式 */
-        @media (max-width: 600px) {
-            .card {
-                width: 90%; /* 在小屏幕上增加卡片宽度 */
-                padding: 20px; /* 减少内边距以适应小屏幕 */
-            }
-            .card h1 {
-                font-size: 20px; /* 减小标题字体大小 */
-            }
-            .card p {
-                font-size: 14px; /* 减小段落字体大小 */
-            }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* 根据需要调整高度 */
+            gap: 20px; /* 圆角方块之间的间距 */
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .button:hover {
+            transform: translateY(-5px);
+        }
+        .button a {
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <h1>欢迎来到我的资源站点</h1>
-            <p>在这里，你将找到各种有用的资源，帮助你更好地学习和工作。</p>
-            <a href="/resources">浏览资源</a>
+    <header class="header">
+        <img src="/public/logo.png" alt="Logo" class="logo">
+        <h1 class="title">忾氧的资源站</h1>
+        <nav class="nav">
+            <a href="/photo">图片</a>
+            <a href="/music">音频</a>
+            <a href="/video">视频</a>
+            <a href="/doc">文档</a>
+            <a href="/zip">压缩包</a>
+            <a href="/other">其他</a>
+        </nav>
+    </header>
+    <main class="content">
+        <div class="button">
+            <a href="/photo">图片</a>
         </div>
-    </div>
+        <div class="button">
+            <a href="/music">音频</a>
+        </div>
+        <div class="button>
+            <a href="/video">视频</a>
+        </div>
+        <div class="button">
+            <a href="/doc">文档</a>
+        </div>
+        <div class="button">
+            <a href="/zip">压缩包</a>
+        </div>
+        <div class="button">
+            <a href="/other">其他</a>
+        </div>
+    </main>
 </body>
 </html>

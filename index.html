@@ -3,62 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>拟态风格欢迎页面</title>
+    <title>淡入淡出动画效果</title>
     <style>
-        body, h1, p {
-            margin: 0;
-            padding: 0;
+        /* 定义关键帧动画 */
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
         }
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
-        }
-        header {
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #333333;
-            margin-bottom: 0.5em;
-        }
-        p {
-            font-size: 1em;
-            color: #666666;
-            line-height: 1.6;
-        }
-        button {
+
+        /* 应用动画到按钮 */
+        .fade-btn {
             padding: 10px 20px;
-            font-size: 1em;
-            color: #ffffff;
-            background-color: #3f51b5;
-            border: none;
-            border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #303f9f;
+            animation: fadeInOut 3s infinite; /* 应用动画，持续3秒，无限循环 */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>欢迎来到我们的网站</h1>
-            <p>我们致力于提供最优质的服务和体验。</p>
-        </header>
-        <button type="button" onclick="location.href='#'">探索更多</button>
-    </div>
+
+<button class="fade-btn">我淡入淡出</button>
+
+<script>
+    // 获取按钮元素
+    var btn = document.querySelector('.fade-btn');
+
+    // 监听按钮的点击事件
+    btn.addEventListener('click', function() {
+        // 点击时切换动画的播放状态
+        if (btn.style.animationPlayState === 'paused') {
+            btn.style.animationPlayState = 'running';
+        } else {
+            btn.style.animationPlayState = 'paused';
+        }
+    });
+</script>
+
+</body>
+</html>
 </body>
 </html>

@@ -3,69 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎</title>
+    <title>拟态风格欢迎页面</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+        body, h1, p {
             margin: 0;
             padding: 0;
         }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
         .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
             text-align: center;
         }
         h1 {
-            margin: 0;
             font-size: 2.5em;
-        }
-        .welcome-message {
-            background-color: #fff;
-            padding: 40px;
-            margin-top: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            color: #333333;
+            margin-bottom: 0.5em;
         }
         p {
-            font-size: 1.2em;
-            text-align: center;
-            color: #333;
+            font-size: 1em;
+            color: #666666;
+            line-height: 1.6;
         }
         button {
-            background-color: #5cb85c;
-            color: white;
             padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 1em;
-            margin: 10px 2px;
-            cursor: pointer;
+            color: #ffffff;
+            background-color: #3f51b5;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
             transition: background-color 0.3s;
+            margin-top: 20px;
         }
         button:hover {
-            background-color: #4cae4c;
+            background-color: #303f9f;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>欢迎来到我的网站！</h1>
+            <h1>欢迎来到我们的网站</h1>
+            <p>我们致力于提供最优质的服务和体验。</p>
         </header>
-        <div class="welcome-message">
-            <p>在这里，你可以找到你需要的一切信息。我们很高兴你的到来！</p>
-            <button onclick="location.href='#'">了解更多</button>
-        </div>
+        <button type="button" onclick="location.href='#'">探索更多</button>
     </div>
 </body>
 </html>

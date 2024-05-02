@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎</title>
+    <title>响应式欢迎页面</title>
     <style>
         body, h1, p {
             margin: 0;
@@ -16,6 +16,7 @@
             align-items: center;
             height: 100vh;
             background-color: #f5f5f5;
+            padding: 0 20px; /* 添加内边距以避免内容太靠近屏幕边缘 */
         }
         .card {
             background: #fff;
@@ -23,11 +24,8 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             padding: 30px;
             width: 80%;
-            max-width: 400px;
+            max-width: 400px; /* 最大宽度限制 */
             transition: transform 0.3s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-10px);
         }
         .card h1 {
             color: #333;
@@ -50,13 +48,27 @@
         .card a:hover {
             background-color: #0056b3;
         }
+        
+        /* 媒体查询：针对小屏幕设备调整样式 */
+        @media (max-width: 600px) {
+            .card {
+                width: 90%; /* 在小屏幕上增加卡片宽度 */
+                padding: 20px; /* 减少内边距以适应小屏幕 */
+            }
+            .card h1 {
+                font-size: 20px; /* 减小标题字体大小 */
+            }
+            .card p {
+                font-size: 14px; /* 减小段落字体大小 */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <h1>欢迎来到忾氧的资源站点</h1>
-            <p>在这里，你将找到所有2024年5月后我上传在互联网上的资源</p>
+            <h1>欢迎来到我的资源站点</h1>
+            <p>在这里，你将找到各种有用的资源，帮助你更好地学习和工作。</p>
             <a href="/resources">浏览资源</a>
         </div>
     </div>

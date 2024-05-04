@@ -39,16 +39,22 @@
         .button {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: center; /* 垂直居中子元素 */
+            justify-content: center; /* 水平居中子元素 */
             background-color: #e0e0e0;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            width: 300px; /* 可以根据实际设计调整按钮的宽度 */
-            height: 300px; /* 可以根据实际设计调整按钮的高度 */
+            width: 300px; /* 容器的宽度 */
+            height: 300px; /* 容器的高度 */
             text-decoration: none;
             color: #333;
+        }
+        .button img {
+            width: 100%; /* 根据需要设置图片的宽度，可以是具体数值或百分比 */
+            height: auto; /* 高度自适应保持图片比例 */
+            max-width: 100%; /* 确保图片不会超出容器宽度 */
+            max-height: 100%; /* 确保图片不会超出容器高度 */
         }
         .button:hover {
             transform: translateY(-5px);

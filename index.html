@@ -9,96 +9,114 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         .header {
             background-color: #f5f5f5;
             display: flex;
             align-items: center;
-            padding: 10px 20px;
-            justify-content: space-between;
+            padding: 20px;
         }
         .logo {
-            height: 50px; /* 调整logo高度以适应布局 */
+            height: 50px;
+            margin-right: 20px;
         }
         .title {
             font-size: 24px;
             font-weight: bold;
         }
-        .nav {
-            display: flex;
-            gap: 10px; /* 按钮之间的间距 */
-        }
-        .nav a {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .nav a:hover {
-            background-color: #0056b3;
-        }
         .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh; /* 根据需要调整高度 */
-            gap: 20px; /* 圆角方块之间的间距 */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
         }
-        .button {
+        .rectangle-button {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            text-align: center;
-            width: 100px;
-            height: 100px;
+            justify-content: center;
             background-color: #e0e0e0;
             border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .button:hover {
-            transform: translateY(-5px);
-        }
-        .button a {
-            color: #333;
-            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            height: 120px; /* 根据需要调整高度 */
+            width: 100%; /* 宽度填满网格列 */
             text-decoration: none;
+            color: #333;
+        }
+        .rectangle-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .rectangle-button p {
+            margin: 0;
+            text-align: center;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .rectangle-button:hover p {
+            color: #007bff;
+        }
+        .square-button {
+            width: 100%; /* 宽度填满网格列 */
+            height: 200px; /* 根据需要调整高度 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-decoration: none;
+            color: #333;
+        }
+        .square-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .square-button p {
+            margin-top: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .square-button:hover p {
+            color: #007bff;
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <img src="/public/logo.png" alt="Logo" class="logo">
+        <img src="public/logo.png" alt="Logo" class="logo">
         <h1 class="title">忾氧的资源站</h1>
-        <nav class="nav">
-            <a href="/photo">图片</a>
-            <a href="/music">音频</a>
-            <a href="/video">视频</a>
-            <a href="/doc">文档</a>
-            <a href="/zip">压缩包</a>
-            <a href="/other">其他</a>
-        </nav>
     </header>
     <main class="content">
-        <div class="button">
-            <a href="/photo">图片</a>
+        <!-- 长方形卡片居中显示 -->
+        <div class="rectangle-button">
+            <p>这里显示我想展示的信息</p>
         </div>
-        <div class="button">
-            <a href="/music">音频</a>
+        <!-- 正方形卡片 -->
+        <div class="square-button">
+            <p>图片</p>
         </div>
-        <div class="button>
-            <a href="/video">视频</a>
+        <div class="square-button">
+            <p>音频</p>
         </div>
-        <div class="button">
-            <a href="/doc">文档</a>
+        <div class="square-button">
+            <p>视频</p>
         </div>
-        <div class="button">
-            <a href="/zip">压缩包</a>
+        <div class="square-button">
+            <p>文档</p>
         </div>
-        <div class="button">
-            <a href="/other">其他</a>
+        <div class="square-button">
+            <p>压缩包</p>
+        </div>
+        <div class="square-button">
+            <p>其他</p>
         </div>
     </main>
 </body>

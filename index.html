@@ -68,7 +68,41 @@
         }
         .button:hover p {
             color: #007bff;
+        }       
+        .contentbig {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            justify-items: center;
         }
+        .buttonbig {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 垂直居中子元素 */
+            justify-content: center; /* 水平居中子元素 */
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 3000px; /* 容器的宽度 */
+            height: 30px; /* 容器的高度 */
+            text-decoration: none;
+            color: #333;
+        }
+        .buttonbig:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .buttonbig p {
+            margin-top: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .button:hover p {
+            color: #007bff;
+        }       
     </style>
 </head>
 <body>
@@ -78,6 +112,10 @@
         </a>
         <h1 class="title">忾氧的资源站</h1>
     </header>
+    <main class="contentbig">
+        <a class="buttonbig">
+            <p>忾氧的资源站</p>
+        </a>
     <main class="content">
         <a href="/img" class="button">
             <img src="public/img/img.png" alt="图片">

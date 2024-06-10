@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/img/favicon.png" sizes="32x32">
+    <title>忾氧的资源站</title>
+    <style>
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            height: 50px;
+            margin-right: 20px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="public/img/logo.png" alt="Logo" class="logo">
+        <div class="title">忾氧的资源站</div>
+    </div>
+    <div class="content">
+        <!-- JavaScript will dynamically add file links here -->
+    </div>
+    <script src="public/js/main.js"></script>
+</body>
+</html>
 
